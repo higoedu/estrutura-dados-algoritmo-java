@@ -15,6 +15,8 @@ um vetor armazena uma sequência de valores onde todos são do mesmo tipo
 - inicializou o tamanho no construtor
 - criou método adicionar (opção 2)
 - criou método adicionar (opção 3)
+
+- obter elemento de uma determinada posição
 */
 public class Vetor {
     private String[] elementos;
@@ -73,6 +75,15 @@ public class Vetor {
             return true;
         }
         return false;
+    }
+
+    public String busca(int posicao){
+        if(!(posicao >= 0 && posicao < tamanho)){
+            //tipo de argumentos inválidos
+            throw new IllegalArgumentException("Posição inválida");
+        }
+        //
+        return this.elementos[posicao];
     }
 
     public int tamanho(){
