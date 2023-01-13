@@ -1,4 +1,7 @@
 package estruturadadosvetor;
+
+import java.util.Arrays;
+
 /*
 um vetor (ou array) é a estrutura de dados mais simples que existe
 um vetor armazena uma sequência de valores onde todos são do mesmo tipo
@@ -70,5 +73,36 @@ public class Vetor {
             return true;
         }
         return false;
+    }
+
+    public int tamanho(){
+        return this.tamanho;
+    }
+
+    @Override
+    public String toString(){
+        //deixa o código mais eficiente
+        StringBuilder s = new StringBuilder();
+
+        //String s = "[";
+        s.append("[");
+
+        for(int i = 0; i < this.tamanho - 1; i++){
+            //s += this.elementos[i];
+            s.append(this.elementos[i]);
+            //s += ", ";
+            s.append(", ");
+        }
+
+        if(this.tamanho() > 0){
+            //s += this.elementos[this.tamanho - 1];
+            s.append(this.elementos[this.tamanho - 1]);
+        }
+
+        //s += "]";
+        s.append("]");
+
+        //return Arrays.toString(elementos);
+        return s.toString();
     }
 }
