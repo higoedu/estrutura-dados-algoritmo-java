@@ -17,6 +17,8 @@ um vetor armazena uma sequência de valores onde todos são do mesmo tipo
 - criou método adicionar (opção 3)
 
 - obter elemento de uma determinada posição
+
+- descobrir ou verificar se um determinado elemento existe no vetor
 */
 public class Vetor {
     private String[] elementos;
@@ -82,8 +84,25 @@ public class Vetor {
             //tipo de argumentos inválidos
             throw new IllegalArgumentException("Posição inválida");
         }
-        //
         return this.elementos[posicao];
+    }
+
+    /*
+    sobreescrever o método busca
+    mofificando a assinatura do método
+    */
+    //public boolean busca(String elemento){
+    public int busca(String elemento){
+        //verifica se o elemento existe ou não
+        //algoritmo de busca sequencial
+        for(int i = 0; i < this.tamanho; i++){
+            if(this.elementos[i].equals(elemento)){
+                //return true;
+                return i;
+            }
+        }
+        //return false;
+        return -1;
     }
 
     public int tamanho(){
