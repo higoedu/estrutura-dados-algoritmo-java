@@ -21,6 +21,8 @@ um vetor armazena uma sequência de valores onde todos são do mesmo tipo
 - descobrir ou verificar se um determinado elemento existe no vetor
 
 - adicionar capacidade ao vetor, sempre que procisa de mais espaço
+
+- remover elemento do vetor, seja em qualquer posição
 */
 public class Vetor {
     private String[] elementos;
@@ -157,6 +159,21 @@ public class Vetor {
         }
         //return false;
         return -1;
+    }
+
+    //B G D E F -> posição a ser removida é 1 (G)
+    //0 1 2 3 4 -> tamanho é 5
+    //vetor[1] = vetor[2]
+    //vetor[2] = vetor[3]
+    //vetor[3] = vetor[4]
+    public void remove(int posicao){
+        if(!(posicao >= 0 && posicao < tamanho)){
+            throw new IllegalArgumentException("Posição inválida");
+        }
+        for(int i = 0; i < this.tamanho - 1; i++){
+            this.elementos[i] = this.elementos[i + 1];
+        }
+        this.tamanho--;
     }
 
     public int tamanho(){
