@@ -105,6 +105,17 @@ public class Lista<T> {
         return -1;
     }
 
+    public boolean contem(T elemento){
+        /*
+        int pos = busca(elemento);
+        if(pos > -1){
+            return true;
+        }
+        return false;
+        */
+        return busca(elemento) > -1;//>=0
+    }
+
     //B G D E F -> posição a ser removida é 1 (G)
     //0 1 2 3 4 -> tamanho é 5
     //vetor[1] = vetor[2]
