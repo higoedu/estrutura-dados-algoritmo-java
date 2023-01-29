@@ -1,6 +1,8 @@
 package estruturadadosvetor;
 
 /*
+Pilhas - Stacks
+
 comportamento de uma pilha
 LIFO
 Last In First Out
