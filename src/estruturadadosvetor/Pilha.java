@@ -1,5 +1,11 @@
 package estruturadadosvetor;
 
+/*
+comportamento de uma pilha
+LIFO
+Last In First Out
+Último a entrar, primeiro a sair
+*/
 public class Pilha<T> extends EstruturaEstatica<T> {
     public Pilha(){
         super();
@@ -22,5 +28,21 @@ public class Pilha<T> extends EstruturaEstatica<T> {
         }
 
         return this.elementos[tamanho - 1];
+    }
+
+    public T desempilha(){
+        if(this.estaVazia()){
+            return null;
+        }
+
+        /*
+        T elemento = this.elementos[tamanho - 1];
+
+        tamanho--;
+
+        return elemento;
+        */
+
+        return this.elementos[--tamanho];
     }
 }
