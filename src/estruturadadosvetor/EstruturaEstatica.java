@@ -1,9 +1,10 @@
 package estruturadadosvetor;
 
 public class EstruturaEstatica<T> {
-    private T[] elementos;
-    private int tamanho;
+    protected T[] elementos;
+    protected int tamanho;
 
+    @SuppressWarnings("uncheked")
     public EstruturaEstatica (int capacidade){
         this.elementos = (T[]) new Object[capacidade];
         this.tamanho = 0;
@@ -36,7 +37,8 @@ public class EstruturaEstatica<T> {
         return true;
     }
 
-    public void aumentaCapacidade(){
+    @SuppressWarnings("unckeked")
+    private void aumentaCapacidade(){
         if(this.tamanho == this.elementos.length){
             T[] elementosNovos = (T[]) new Object[this.elementos.length * 2];
             for(int i = 0; i < this.elementos.length; i++){
