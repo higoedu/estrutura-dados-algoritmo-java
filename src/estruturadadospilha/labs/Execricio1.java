@@ -16,7 +16,7 @@ mostre uma mensagem
 desempilhe todos os elementos,
 imprima-os na tela
 */
-public class Exericio1 {
+public class Execricio1 {
     public static void main(String[] args) {
         Pilha<Integer> pilha = new Pilha<Integer>();
         Scanner scanner = new Scanner(System.in);
