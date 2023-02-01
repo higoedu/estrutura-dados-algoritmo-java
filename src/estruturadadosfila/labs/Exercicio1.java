@@ -1,7 +1,16 @@
 package estruturadadosfila.labs;
 
 import estruturadadosfila.Fila;
-
+/*
+Usando a estrutura de dados Fila,
+crie uma fila de documentos que precisam ser impressos.
+Cada documento é composto de nome e quantidade de folhas a serem impressas.
+O programa deve:
+Enfileirar os documentos;
+E seguindo a ordem, o programa deve "imprimir" cada documento,
+desenfilierando da fila.
+Se desejar pode usar Threads para esperar a impressão de acordo com o número de folhas a serem impressas.
+*/
 public class Exercicio1 {
     public static void main(String[] args) {
         Fila<Documento> filaImpressora = new Fila<>();
