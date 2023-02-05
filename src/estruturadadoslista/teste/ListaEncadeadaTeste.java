@@ -8,6 +8,7 @@ public class ListaEncadeadaTeste {
 
         listaEncadeada.adiciona(1);
 
+        System.out.println("Tamanho = " + listaEncadeada.getTamanho());
         System.out.println(listaEncadeada);
     }
 }
